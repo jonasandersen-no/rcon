@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>no.jonasandersen</groupId>
   <artifactId>rcon</artifactId>
-  <version>3.0</version>
+  <version>3.0-SNAPSHOT</version>
 
   <properties>
     <java.version>25</java.version>
@@ -18,4 +18,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>reposilite-releases</id>
+      <name>Reposilite Releases</name>
+      <url>https://maven.jonasandersen.no/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>reposilite-snapshots</id>
+      <name>Reposilite Snapshots</name>
+      <url>https://maven.jonasandersen.no/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
