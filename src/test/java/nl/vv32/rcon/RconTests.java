@@ -1,24 +1,26 @@
 package nl.vv32.rcon;
 
-import nl.vv32.rcon.util.RconServerSimulator;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.EOFException;
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.InetSocketAddress;
-import java.nio.channels.SocketChannel;
-import java.nio.channels.UnresolvedAddressException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import nl.vv32.rcon.util.RconServerSimulator;
+import org.junit.jupiter.api.Test;
 
 public class RconTests {
 
     @Test
     void connect() throws IOException {
-        assertThrows(UnresolvedAddressException.class, () -> Rcon.open(new InetSocketAddress("thishostsdoesntexist", 65535)));
-        assertThrows(UnresolvedAddressException.class, () -> Rcon.open("thishostdoesntexist", 65535));
+        assertThrows(ConnectException.class, () -> Rcon.open(new InetSocketAddress("thishostsdoesntexist", 65535)));
+        assertThrows(ConnectException.class, () -> Rcon.open("thishostdoesntexist", 65535));
     }
 
     @Test
