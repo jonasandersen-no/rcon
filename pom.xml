@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>no.jonasandersen</groupId>
   <artifactId>rcon</artifactId>
-  <version>3.0</version>
+  <version>3.1-SNAPSHOT</version>
 
   <properties>
     <java.version>25</java.version>
@@ -12,8 +12,8 @@
   <scm>
     <connection>scm:git:git@github.com:jonasandersen-no/rcon.git</connection>
     <developerConnection>scm:git:git@github.com:jonasandersen-no/rcon.git</developerConnection>
-    <tag>v3.0</tag>
-    <url />
+    <tag></tag>
+    <url></url>
   </scm>
 
 
